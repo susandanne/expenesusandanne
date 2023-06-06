@@ -7,6 +7,7 @@ import android.view.Menu;
 
 
 import com.example.expenesusandanne.databinding.ActivityMainBinding;
+import com.example.expenesusandanne.views.AddTransactionFragment;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -17,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
      setContentView(binding.getRoot());
       setSupportActionBar(binding.materialToolbar);
       getSupportActionBar().setTitle("hello sir");
+      binding.floatingActionButton.setOnClickListener(c->{
+          new AddTransactionFragment().show(getSupportFragmentManager(),null);
+      });
 
     }
 
